@@ -55,7 +55,7 @@ struct StudyTasks {
     static let walkingTask: ORKOrderedTask = {
         let intendedUseDescription = "Tests ability to walk"
         
-        return ORKOrderedTask.shortWalk(withIdentifier: "ShortWalkTask", intendedUseDescription: intendedUseDescription, numberOfStepsPerLeg: 20, restDuration: 180, options: ORKPredefinedTaskOption())
+        return ORKOrderedTask.shortWalk(withIdentifier: "ShortWalkTask", intendedUseDescription: intendedUseDescription, numberOfStepsPerLeg: 20, restDuration: 30, options: ORKPredefinedTaskOption())
     }()
     
     static let surveyTask: ORKOrderedTask = {

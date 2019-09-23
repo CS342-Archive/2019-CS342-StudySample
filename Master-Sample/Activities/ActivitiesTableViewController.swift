@@ -8,6 +8,8 @@
 
 import UIKit
 import ResearchKit
+import CS342Support
+import Firebase
 
 class ActivitiesTableViewController: UITableViewController {
     
@@ -82,6 +84,35 @@ extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
         // Handle results using taskViewController.result
+        
+        do {
+            let result = taskViewController.result
+            let jsonData = try ORKESerializer.jsonData(for: result)
+            
+            
+            if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
+                print(jsonString)
+            }
+            
+            
+            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any], let identifier = json["identifier"] as? String {
+            
+                let db = Firestore.firestore()
+                db.collection("surveys").document(identifier).setData(json) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+                
+            }
+            
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         taskViewController.dismiss(animated: true, completion: nil)
     }
     

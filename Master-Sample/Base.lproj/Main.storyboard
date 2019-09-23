@@ -602,7 +602,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made at Stanford with ❤️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-g6-syv">
-                                            <rect key="frame" x="15" y="19" width="345" height="16"/>
+                                            <rect key="frame" x="15" y="19" width="384" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="gjW-hd-Xy4"/>
                                             </constraints>
@@ -611,7 +611,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wq-Hr-5rq">
-                                            <rect key="frame" x="15" y="35" width="345" height="16"/>
+                                            <rect key="frame" x="15" y="35" width="384" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="mwV-9I-ZQJ"/>
                                             </constraints>
@@ -620,7 +620,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5q-0u-QMU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -638,7 +638,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingCell" textLabel="O9s-vY-Pob" rowHeight="65" style="IBUITableViewCellStyleDefault" id="q0m-m8-j7x" userLabel="SettingTableViewCell" customClass="SettingTableViewCell" customModule="VascTrac" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingCell" textLabel="O9s-vY-Pob" rowHeight="65" style="IBUITableViewCellStyleDefault" id="q0m-m8-j7x" userLabel="SettingTableViewCell" customClass="SettingTableViewCell" customModule="Master_Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0m-m8-j7x" id="Df6-rL-GOl">
@@ -655,7 +655,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingDetailCell" textLabel="j3o-Ic-TwT" detailTextLabel="Tz4-bz-f7a" rowHeight="65" style="IBUITableViewCellStyleValue1" id="cyR-d7-Tja" userLabel="SettingTableViewCell" customClass="SettingTableViewCell" customModule="VascTrac" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingDetailCell" textLabel="j3o-Ic-TwT" detailTextLabel="Tz4-bz-f7a" rowHeight="65" style="IBUITableViewCellStyleValue1" id="cyR-d7-Tja" userLabel="SettingTableViewCell" customClass="SettingTableViewCell" customModule="Master_Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="193" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cyR-d7-Tja" id="usQ-Lh-ral">
@@ -701,6 +701,7 @@
                         <outlet property="appVersionLabel" destination="6wq-Hr-5rq" id="xa4-0a-qpU"/>
                         <outlet property="tableView" destination="c4n-xQ-geY" id="Ekj-bz-J0k"/>
                         <outlet property="userIdLabel" destination="geS-q9-KkY" id="YWP-Ns-59F"/>
+                        <segue destination="EAO-eP-aZ1" kind="unwind" identifier="unwindToWithdrawal" unwindAction="unwindToWithdrawal:" id="xGF-1w-6Yz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpe-gp-KIp" userLabel="First Responder" sceneMemberID="firstResponder"/>

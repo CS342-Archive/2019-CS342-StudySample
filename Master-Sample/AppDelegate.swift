@@ -8,6 +8,7 @@
 
 import UIKit
 import ResearchKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         lockApp()
+        
+        FirebaseApp.configure()
         return true
     }
 
@@ -65,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        let passcodeViewController = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "Welcome back to ResearchKit Sample App", delegate: self)
+        let passcodeViewController = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "Welcome back!", delegate: self)
         containerViewController?.present(passcodeViewController, animated: false, completion: nil)
     }
     

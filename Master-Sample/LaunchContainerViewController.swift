@@ -34,6 +34,10 @@ class LaunchContainerViewController: UIViewController {
         toStudy()
     }
     
+    @IBAction func unwindToWithdrawal(_ unwindSegue: UIStoryboardSegue) {
+        toWithdrawal()
+    }
+    
     // MARK: Transitions
     
     func toStudy() {
@@ -43,6 +47,32 @@ class LaunchContainerViewController: UIViewController {
     func toOnboarding() {
         performSegue(withIdentifier: "toOnboarding", sender: self)
     }
+    
+    func toWithdrawal() {
+        let viewController = WithdrawViewController()
+        viewController.delegate = self
+        
+        present(viewController, animated: true, completion: nil)
+    }
 
 }
 
+extension LaunchContainerViewController: ORKTaskViewControllerDelegate {
+    
+    public func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        // Check if the user has finished the `WithdrawViewController`.
+        if taskViewController is WithdrawViewController {
+            /*
+             If the user has completed the withdrawl steps, remove them from
+             the study and transition to the onboarding view.
+             */
+            if reason == .completed {
+                ORKPasscodeViewController.removePasscodeFromKeychain()
+                toOnboarding()
+            }
+            
+            // Dismiss the `WithdrawViewController`.
+            dismiss(animated: true, completion: nil)
+        }
+    }
+}

@@ -65,9 +65,9 @@ class ProfileViewController: UIViewController {
         self.tableView.estimatedRowHeight = 65.0
         self.tableView.rowHeight = UITableView.automaticDimension
         
-        /*if let currentUser = self.user {
-            self.userIdLabel.text = "\(currentUser.eId ?? "0000000")"
-        }*/
+        if let currentUser = StudyUser.shared.currentUser {
+            self.userIdLabel.text = currentUser.uid
+        }
         
         if let release = Bundle.main.releaseVersionNumber,
             let build = Bundle.main.buildVersionNumber {
@@ -101,18 +101,7 @@ extension ProfileViewController {
     }
     
     func toWithdraw() {
-        let alert = UIAlertController(title: "Are you sure that you want to withdraw?", message:"Withdrawing from the study will reset the app to the state it was in prior to you originally joining the study.", preferredStyle: .alert)
-        
-        let withdraw = UIAlertAction(title: "Yes", style: .destructive) { alertAction in
-            //NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.Notification.SessionExpired), object: nil)
-        }
-        
-        alert.addAction(withdraw)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindToWithdrawal", sender: nil)
     }
     
 }

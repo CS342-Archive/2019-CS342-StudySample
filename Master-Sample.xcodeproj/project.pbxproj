@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F4E2338503700159EDF /* ProfileViewController.swift */; };
 		8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F522338555000159EDF /* StudyContainerTabBarController.swift */; };
 		8E028F562338567200159EDF /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F552338567200159EDF /* HealthKitManager.swift */; };
+		8E6710052338769B00AA32AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E6710042338769B00AA32AB /* GoogleService-Info.plist */; };
+		8E6710092338790800AA32AB /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710082338790800AA32AB /* LoginStep.swift */; };
+		8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100C23387B0400AA32AB /* LoginWaitStep.swift */; };
+		8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */; };
+		8E6710142338827300AA32AB /* LoginFriendlyOrderedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */; };
+		8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67101A23388E3900AA32AB /* StudyUser.swift */; };
+		8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710242338A14D00AA32AB /* ORKESerialization.m */; };
 		8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E02338230A002DCBBB /* AppDelegate.swift */; };
 		8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */; };
 		8EA015E62338230A002DCBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA015E42338230A002DCBBB /* Main.storyboard */; };
@@ -28,6 +35,7 @@
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
 		8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */; };
+		B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,12 +92,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		715352001ACBE8D651FF0BEE /* Pods-Master-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.release.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		8E028F42233838F000159EDF /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
 		8E028F44233839E300159EDF /* ActivityTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableItem.swift; sourceTree = "<group>"; };
 		8E028F45233839E300159EDF /* StudyTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTasks.swift; sourceTree = "<group>"; };
 		8E028F4E2338503700159EDF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8E028F522338555000159EDF /* StudyContainerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyContainerTabBarController.swift; sourceTree = "<group>"; };
 		8E028F552338567200159EDF /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		8E6710042338769B00AA32AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E6710082338790800AA32AB /* LoginStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
+		8E67100C23387B0400AA32AB /* LoginWaitStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWaitStep.swift; sourceTree = "<group>"; };
+		8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
+		8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFriendlyOrderedTask.swift; sourceTree = "<group>"; };
+		8E67101A23388E3900AA32AB /* StudyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUser.swift; sourceTree = "<group>"; };
+		8E6710222338A05300AA32AB /* Study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E6710242338A14D00AA32AB /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
+		8E6710252338A14D00AA32AB /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
 		8EA015DD2338230A002DCBBB /* Master-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA015E02338230A002DCBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContainerViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +124,8 @@
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		8EA0161E23382D76002DCBBB /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +136,22 @@
 				8EA0160F23382874002DCBBB /* CS342Support.framework in Frameworks */,
 				8EA015F623382385002DCBBB /* HealthKit.framework in Frameworks */,
 				8EA0161323382874002DCBBB /* ResearchKit.framework in Frameworks */,
+				B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		448235A7F0C52AF0F13FB9DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */,
+				715352001ACBE8D651FF0BEE /* Pods-Master-Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8E028F3F233838D200159EDF /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +178,31 @@
 			path = HealthKit;
 			sourceTree = "<group>";
 		};
+		8E67100E23387C6A00AA32AB /* Withdrawal */ = {
+			isa = PBXGroup;
+			children = (
+				8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */,
+			);
+			path = Withdrawal;
+			sourceTree = "<group>";
+		};
+		8E67101923388E1B00AA32AB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8E67101A23388E3900AA32AB /* StudyUser.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		8E6710232338A13600AA32AB /* ResearchKit */ = {
+			isa = PBXGroup;
+			children = (
+				8E6710252338A14D00AA32AB /* ORKESerialization.h */,
+				8E6710242338A14D00AA32AB /* ORKESerialization.m */,
+			);
+			path = ResearchKit;
+			sourceTree = "<group>";
+		};
 		8EA015D42338230A002DCBBB = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +211,7 @@
 				8EA015DF2338230A002DCBBB /* Master-Sample */,
 				8EA015DE2338230A002DCBBB /* Products */,
 				8EA015F423382385002DCBBB /* Frameworks */,
+				448235A7F0C52AF0F13FB9DC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,15 +226,19 @@
 		8EA015DF2338230A002DCBBB /* Master-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				8EA015F22338235A002DCBBB /* Supporting Files */,
+				8E67101923388E1B00AA32AB /* Account */,
 				8E028F54233855A300159EDF /* HealthKit */,
 				8E028F3F233838D200159EDF /* Activities */,
 				8E028F4D23384E7D00159EDF /* Profile */,
 				8EA015FB233827FD002DCBBB /* Onboarding */,
+				8E67100E23387C6A00AA32AB /* Withdrawal */,
 				8EA015E02338230A002DCBBB /* AppDelegate.swift */,
 				8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */,
 				8EA015E42338230A002DCBBB /* Main.storyboard */,
 				8E028F522338555000159EDF /* StudyContainerTabBarController.swift */,
+				8E6710042338769B00AA32AB /* GoogleService-Info.plist */,
+				8EA015F22338235A002DCBBB /* Supporting Files */,
+				8E6710222338A05300AA32AB /* Study-Bridging-Header.h */,
 			);
 			path = "Master-Sample";
 			sourceTree = "<group>";
@@ -186,6 +246,7 @@
 		8EA015F22338235A002DCBBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E6710232338A13600AA32AB /* ResearchKit */,
 				8EA015F323382385002DCBBB /* Master-Sample.entitlements */,
 				8EA015E72338230D002DCBBB /* Assets.xcassets */,
 				8EA015E92338230D002DCBBB /* LaunchScreen.storyboard */,
@@ -198,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA015F523382385002DCBBB /* HealthKit.framework */,
+				EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,6 +280,9 @@
 				8EA0161A233828E1002DCBBB /* ConsentDocument.swift */,
 				8EA0161E23382D76002DCBBB /* HealthDataStep.swift */,
 				8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */,
+				8E6710082338790800AA32AB /* LoginStep.swift */,
+				8E67100C23387B0400AA32AB /* LoginWaitStep.swift */,
+				8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -246,10 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA015EF2338230D002DCBBB /* Build configuration list for PBXNativeTarget "Master-Sample" */;
 			buildPhases = (
+				A869A27822F4223BFFBF82B3 /* [CP] Check Pods Manifest.lock */,
 				8EA015D92338230A002DCBBB /* Sources */,
 				8EA015DA2338230A002DCBBB /* Frameworks */,
 				8EA015DB2338230A002DCBBB /* Resources */,
 				8EA0161723382874002DCBBB /* Embed Frameworks */,
+				2DA97285A5CF13A0B49A594B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,12 +410,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA015EB2338230D002DCBBB /* LaunchScreen.storyboard in Resources */,
+				8E6710052338769B00AA32AB /* GoogleService-Info.plist in Resources */,
 				8EA015E82338230D002DCBBB /* Assets.xcassets in Resources */,
 				8EA015E62338230A002DCBBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DA97285A5CF13A0B49A594B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master-Sample/Pods-Master-Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master-Sample/Pods-Master-Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Master-Sample/Pods-Master-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A869A27822F4223BFFBF82B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Master-Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EA015D92338230A002DCBBB /* Sources */ = {
@@ -358,16 +468,22 @@
 				8EA01619233828BB002DCBBB /* IntroductionViewController.swift in Sources */,
 				8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */,
 				8E028F47233839E300159EDF /* StudyTasks.swift in Sources */,
+				8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */,
+				8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */,
 				8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */,
 				8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */,
 				8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */,
 				8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */,
 				8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */,
 				8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */,
+				8E6710092338790800AA32AB /* LoginStep.swift in Sources */,
+				8E6710142338827300AA32AB /* LoginFriendlyOrderedTask.swift in Sources */,
 				8E028F46233839E300159EDF /* ActivityTableItem.swift in Sources */,
 				8E028F562338567200159EDF /* HealthKitManager.swift in Sources */,
 				8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */,
 				8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */,
+				8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */,
+				8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,19 +640,21 @@
 		};
 		8EA015F02338230D002DCBBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Master-Sample/Supporting Files/Master-Sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CQRZ4E7K9U;
+				DEVELOPMENT_TEAM = L5J57DU2Q2;
 				INFOPLIST_FILE = "Master-Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.Master-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs342.sample-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Master-Sample/Study-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -544,19 +662,21 @@
 		};
 		8EA015F12338230D002DCBBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 715352001ACBE8D651FF0BEE /* Pods-Master-Sample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Master-Sample/Supporting Files/Master-Sample.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CQRZ4E7K9U;
+				DEVELOPMENT_TEAM = L5J57DU2Q2;
 				INFOPLIST_FILE = "Master-Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.Master-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.stanford.cs342.sample-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Master-Sample/Study-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

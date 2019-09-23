@@ -84,6 +84,8 @@ extension HealthKitManager {
                 strongSelf.query(quantityType: type, completion: { result, error in
                     if (error == nil) {
                         //TODO: send result
+                        
+                        
                         print("background query for \(type.identifier) with \(result.count) result(s)")
                     }
                     dispatchGroup.leave()
