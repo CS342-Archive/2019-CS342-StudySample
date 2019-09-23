@@ -8,13 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
+            toStudy()
+        }
+        else {
+            toOnboarding()
+        }
     }
-
+    
+    @IBAction func unwindToStudy(_ unwindSegue: UIStoryboardSegue) {
+        toStudy()
+    }
+    
+    // MARK: Transitions
+    
+    func toStudy() {
+        performSegue(withIdentifier: "toStudy", sender: self)
+    }
+    
+    func toOnboarding() {
+        performSegue(withIdentifier: "toOnboarding", sender: self)
+    }
 
 }
 
