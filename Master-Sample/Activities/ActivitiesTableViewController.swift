@@ -33,17 +33,22 @@ extension ActivitiesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardTableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardTableCell", for: indexPath) as! ActivityTableViewCell
         
         if let activity = ActivityTableItem(rawValue: (indexPath as NSIndexPath).row) {
-            cell.textLabel?.text = activity.title
-            cell.detailTextLabel?.text = activity.subtitle
+            cell.titleLabel?.text = activity.title
+            cell.subtitleLabel?.text = activity.subtitle
+            cell.customImage.image = activity.image
         }
         
         return cell
     }
     
     // MARK: UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         

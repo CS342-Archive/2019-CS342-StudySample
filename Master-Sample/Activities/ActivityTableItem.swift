@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ActivityTableItem: Int {
     case survey, activeTask
@@ -37,6 +38,15 @@ enum ActivityTableItem: Int {
             return "Answer 6 short questions"
         case .activeTask:
             return "Active movement task!"
+        }
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .survey:
+            return UIImage(named: "SurveyIcon")
+        default:
+            return UIImage(named: "ActivityIcon")
         }
     }
 }
