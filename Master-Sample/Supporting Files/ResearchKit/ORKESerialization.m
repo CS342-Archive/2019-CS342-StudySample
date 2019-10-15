@@ -33,7 +33,7 @@
 #import "ORKESerialization.h"
 
 @import ResearchKit;
-@import ResearchKit.Private;
+@import ResearchKit.Swift;
 
 @import MapKit;
 

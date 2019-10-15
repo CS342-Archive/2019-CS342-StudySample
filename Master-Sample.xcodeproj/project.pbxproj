@@ -13,13 +13,13 @@
 		8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F4E2338503700159EDF /* ProfileViewController.swift */; };
 		8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F522338555000159EDF /* StudyContainerTabBarController.swift */; };
 		8E028F562338567200159EDF /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F552338567200159EDF /* HealthKitManager.swift */; };
-		8E6710052338769B00AA32AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E6710042338769B00AA32AB /* GoogleService-Info.plist */; };
 		8E6710092338790800AA32AB /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710082338790800AA32AB /* LoginStep.swift */; };
 		8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100C23387B0400AA32AB /* LoginWaitStep.swift */; };
 		8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */; };
 		8E6710142338827300AA32AB /* LoginFriendlyOrderedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */; };
 		8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67101A23388E3900AA32AB /* StudyUser.swift */; };
 		8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710242338A14D00AA32AB /* ORKESerialization.m */; };
+		8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */; };
 		8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E02338230A002DCBBB /* AppDelegate.swift */; };
 		8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */; };
 		8EA015E62338230A002DCBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA015E42338230A002DCBBB /* Main.storyboard */; };
@@ -29,8 +29,6 @@
 		8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015FD23382821002DCBBB /* OnboardingViewController.swift */; };
 		8EA0160F23382874002DCBBB /* CS342Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA0160E23382867002DCBBB /* CS342Support.framework */; };
 		8EA0161023382874002DCBBB /* CS342Support.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA0160E23382867002DCBBB /* CS342Support.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8EA0161323382874002DCBBB /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA016062338285E002DCBBB /* ResearchKit.framework */; };
-		8EA0161423382874002DCBBB /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA016062338285E002DCBBB /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EA01619233828BB002DCBBB /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01618233828BB002DCBBB /* IntroductionViewController.swift */; };
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
@@ -39,20 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8EA016052338285E002DCBBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		8EA016072338285E002DCBBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
 		8EA0160D23382867002DCBBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EA0160923382867002DCBBB /* CS342Support.xcodeproj */;
@@ -67,13 +51,6 @@
 			remoteGlobalIDString = 8ECC933D231C7DB300A6DB80;
 			remoteInfo = CS342Support;
 		};
-		8EA0161523382874002DCBBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8EA0161423382874002DCBBB /* ResearchKit.framework in Embed Frameworks */,
 				8EA0161023382874002DCBBB /* CS342Support.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -99,7 +75,6 @@
 		8E028F4E2338503700159EDF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8E028F522338555000159EDF /* StudyContainerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyContainerTabBarController.swift; sourceTree = "<group>"; };
 		8E028F552338567200159EDF /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		8E6710042338769B00AA32AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E6710082338790800AA32AB /* LoginStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
 		8E67100C23387B0400AA32AB /* LoginWaitStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWaitStep.swift; sourceTree = "<group>"; };
 		8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +83,7 @@
 		8E6710222338A05300AA32AB /* Study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E6710242338A14D00AA32AB /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
 		8E6710252338A14D00AA32AB /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
+		8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EA015DD2338230A002DCBBB /* Master-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA015E02338230A002DCBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContainerViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +94,6 @@
 		8EA015F323382385002DCBBB /* Master-Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Master-Sample.entitlements"; sourceTree = "<group>"; };
 		8EA015F523382385002DCBBB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8EA015FD23382821002DCBBB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "ResearchKit-2.0.0/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		8EA0160923382867002DCBBB /* CS342Support.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CS342Support.xcodeproj; path = "../CS342-Support-Library/CS342Support.xcodeproj"; sourceTree = "<group>"; };
 		8EA01618233828BB002DCBBB /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
@@ -135,7 +110,6 @@
 			files = (
 				8EA0160F23382874002DCBBB /* CS342Support.framework in Frameworks */,
 				8EA015F623382385002DCBBB /* HealthKit.framework in Frameworks */,
-				8EA0161323382874002DCBBB /* ResearchKit.framework in Frameworks */,
 				B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				8EA0160923382867002DCBBB /* CS342Support.xcodeproj */,
-				8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */,
 				8EA015DF2338230A002DCBBB /* Master-Sample */,
 				8EA015DE2338230A002DCBBB /* Products */,
 				8EA015F423382385002DCBBB /* Frameworks */,
@@ -236,7 +209,7 @@
 				8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */,
 				8EA015E42338230A002DCBBB /* Main.storyboard */,
 				8E028F522338555000159EDF /* StudyContainerTabBarController.swift */,
-				8E6710042338769B00AA32AB /* GoogleService-Info.plist */,
+				8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */,
 				8EA015F22338235A002DCBBB /* Supporting Files */,
 				8E6710222338A05300AA32AB /* Study-Bridging-Header.h */,
 			);
@@ -287,15 +260,6 @@
 			path = Steps;
 			sourceTree = "<group>";
 		};
-		8EA016002338285E002DCBBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8EA016062338285E002DCBBB /* ResearchKit.framework */,
-				8EA016082338285E002DCBBB /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8EA0160A23382867002DCBBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +286,6 @@
 			);
 			dependencies = (
 				8EA0161223382874002DCBBB /* PBXTargetDependency */,
-				8EA0161623382874002DCBBB /* PBXTargetDependency */,
 			);
 			name = "Master-Sample";
 			productName = "Master-Sample";
@@ -368,10 +331,6 @@
 					ProductGroup = 8EA0160A23382867002DCBBB /* Products */;
 					ProjectRef = 8EA0160923382867002DCBBB /* CS342Support.xcodeproj */;
 				},
-				{
-					ProductGroup = 8EA016002338285E002DCBBB /* Products */;
-					ProjectRef = 8EA015FF2338285E002DCBBB /* ResearchKit.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -381,20 +340,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8EA016062338285E002DCBBB /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = 8EA016052338285E002DCBBB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8EA016082338285E002DCBBB /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = 8EA016072338285E002DCBBB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		8EA0160E23382867002DCBBB /* CS342Support.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -410,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA015EB2338230D002DCBBB /* LaunchScreen.storyboard in Resources */,
-				8E6710052338769B00AA32AB /* GoogleService-Info.plist in Resources */,
+				8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */,
 				8EA015E82338230D002DCBBB /* Assets.xcassets in Resources */,
 				8EA015E62338230A002DCBBB /* Main.storyboard in Resources */,
 			);
@@ -494,11 +439,6 @@
 			isa = PBXTargetDependency;
 			name = CS342Support;
 			targetProxy = 8EA0161123382874002DCBBB /* PBXContainerItemProxy */;
-		};
-		8EA0161623382874002DCBBB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = 8EA0161523382874002DCBBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

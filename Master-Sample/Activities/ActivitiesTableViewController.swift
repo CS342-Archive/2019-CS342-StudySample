@@ -52,7 +52,7 @@ extension ActivitiesTableViewController {
         let taskViewController: ORKTaskViewController
         switch activity {
         case .survey:
-            taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRun: NSUUID() as UUID)
+            taskViewController = ORKTaskViewController(task: StudyTasks.sf12Task, taskRun: NSUUID() as UUID)
         case .activeTask:
             taskViewController = ORKTaskViewController(task: StudyTasks.walkingTask, taskRun: NSUUID() as UUID)
             
