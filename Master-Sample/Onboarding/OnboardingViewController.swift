@@ -69,7 +69,7 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                 let idConfirmRes = stepResult?.results?.last as? ORKTextQuestionResult, let idConfirm = idConfirmRes.textAnswer {
                 
                 if id == idConfirm {
-                    StudyUser.login { (success) in
+                    StudyUser.login(id) { (success) in
                         guard success else {
                             DispatchQueue.main.async {
                                 Alerts.showInfo(title: "Unable to Login", message: "Please try again in five minutes.")

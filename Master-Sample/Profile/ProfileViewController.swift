@@ -62,9 +62,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 65.0
-        self.tableView.rowHeight = UITableView.automaticDimension
-        
         if let currentUser = StudyUser.shared.currentUser {
             self.userIdLabel.text = currentUser.uid
         }

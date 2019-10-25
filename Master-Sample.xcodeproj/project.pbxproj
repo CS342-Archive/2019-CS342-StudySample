@@ -14,6 +14,8 @@
 		8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F522338555000159EDF /* StudyContainerTabBarController.swift */; };
 		8E028F562338567200159EDF /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F552338567200159EDF /* HealthKitManager.swift */; };
 		8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */; };
+		8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */; };
+		8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */; };
 		8E6710092338790800AA32AB /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710082338790800AA32AB /* LoginStep.swift */; };
 		8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100C23387B0400AA32AB /* LoginWaitStep.swift */; };
 		8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */; };
@@ -77,6 +79,8 @@
 		8E028F522338555000159EDF /* StudyContainerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyContainerTabBarController.swift; sourceTree = "<group>"; };
 		8E028F552338567200159EDF /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableItem.swift; sourceTree = "<group>"; };
+		8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticProfileViewController.swift; sourceTree = "<group>"; };
 		8E6710082338790800AA32AB /* LoginStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
 		8E67100C23387B0400AA32AB /* LoginWaitStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWaitStep.swift; sourceTree = "<group>"; };
 		8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				8E028F4E2338503700159EDF /* ProfileViewController.swift */,
+				8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */,
+				8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -414,12 +420,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA01619233828BB002DCBBB /* IntroductionViewController.swift in Sources */,
+				8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */,
 				8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */,
 				8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */,
 				8E028F47233839E300159EDF /* StudyTasks.swift in Sources */,
 				8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */,
 				8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */,
 				8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */,
+				8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */,
 				8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */,
 				8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */,
 				8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */,
