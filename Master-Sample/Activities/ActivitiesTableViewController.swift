@@ -100,12 +100,17 @@ extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
             }
             
             
-            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any], let identifier = json["identifier"] as? String {
+            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any],
+                let identifier = json["identifier"] as? String,
+                let requestEmail = StudyUser.globalEmail() {
             
                 let db = Firestore.firestore()
-                let baseUrl = "/edu.stanford.cs342.ssmart/users/santig@stanford.edu"
                 
-                db.collection(baseUrl + "/surveys").document(identifier).setData(json) { err in
+                let bundleId = Bundle.main.bundleIdentifier!
+                let stanfordRITBucket = "/\(bundleId)/users/\(requestEmail)"
+
+                db.collection(stanfordRITBucket + "/surveys/\(identifier)").document(identifier).setData(json) { err in
+                    
                     if let err = err {
                         print("Error writing document: \(err)")
                     } else {
