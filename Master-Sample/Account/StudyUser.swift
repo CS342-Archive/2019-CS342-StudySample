@@ -20,25 +20,46 @@ class StudyUser {
         return Auth.auth().currentUser
     }
     
-    class func login(_ eid: String, completion: @escaping (Bool)->Void) {
-        guard !eid.isEmpty else {
+    class func sendLoginLink(email: String, completion: @escaping (Bool)->Void) {
+        guard !email.isEmpty else {
             completion(false)
             return
         }
         
-        /*let actionCodeSettings = ActionCodeSettings()
-        //actionCodeSettings.url = URL(string: "https://www.example.com")
-        // The sign-in operation has to always be completed in the app.
-        actionCodeSettings.handleCodeInApp = true
+        let actionCodeSettings = ActionCodeSettings()
+        //actionCodeSettings.url = URL(string: "https://cs342.page.link")
+        actionCodeSettings.url = URL(string: "https://mhealthcs342.page.link")
+        actionCodeSettings.handleCodeInApp = true // The sign-in operation has to always be completed in the app.
         actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-        Auth.auth().sendSignInLink(toEmail: "ssgutierrez42@gmail.com", actionCodeSettings: actionCodeSettings) { (error) in
-            guard let _ = authResult?.user else {
+        
+        Auth.auth().sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
                 completion(false)
                 return
             }
             
             completion(true)
-        }*/
+        }
+    }
+    
+    class func save(email: String) {
+        UserDefaults.standard.set(email, forKey: Constants.prefUserEmail)
+    }
+    
+    class func globalEmail() -> String? {
+        return UserDefaults.standard.string(forKey: Constants.prefUserEmail)
+    }
+    
+    class func loggedIn() -> Bool {
+        return (StudyUser.shared.currentUser?.isEmailVerified ?? false) && UserDefaults.standard.bool(forKey: Constants.prefConfirmedLogin)
+    }
+    
+    class func login(_ eid: String, completion: @escaping (Bool)->Void) {
+        guard !eid.isEmpty else {
+            completion(false)
+            return
+        }
         
         Auth.auth().signInAnonymously() { (authResult, error) in
             guard let user = authResult?.user else {
@@ -62,7 +83,7 @@ class StudyUser {
         
         db.collection("study_users").whereField("eid", isEqualTo: eid).getDocuments() { (snapshot, err) in
             guard let snapshot = snapshot else {
-                print(err?.localizedDescription)
+                //print(err?.localizedDescription)
                 completion(nil, false)
                 return
             }

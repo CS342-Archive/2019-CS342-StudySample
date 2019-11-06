@@ -21,12 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let standardDefaults = UserDefaults.standard
-        if standardDefaults.object(forKey: "ORKSampleFirstRun") == nil {
-            ORKPasscodeViewController.removePasscodeFromKeychain()
-            standardDefaults.setValue("ORKSampleFirstRun", forKey: "ORKSampleFirstRun")
-        }
-        
         // Appearance customization
         /*let pageControlAppearance = UIPageControl.appearance()
         pageControlAppearance.pageIndicatorTintColor = UIColor.lightGray
@@ -34,13 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         lockApp()
         
         FirebaseApp.configure()
+        
+        DynamicLinks.performDiagnostics(completion: nil)
+        
+        if !UserDefaults.standard.bool(forKey: Constants.prefFirstRunWasMarked) {
+            if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
+                ORKPasscodeViewController.removePasscodeFromKeychain()
+            }
+            try? Auth.auth().signOut()
+            UserDefaults.standard.set(true, forKey: Constants.prefFirstRunWasMarked)
+        }
+        
         return true
     }
 
@@ -57,6 +61,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         lockApp()
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        let handled = DynamicLinks.dynamicLinks().handleUniversalLink(userActivity.webpageURL!) { (dynamiclink, error) in
+            
+            guard let link = dynamiclink?.url?.absoluteString, let email = StudyUser.globalEmail() else {
+                return
+            }
+            
+            if Auth.auth().isSignIn(withEmailLink: link) {
+                Auth.auth().signIn(withEmail: email, link: link, completion: { (result, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                    
+                    if let confirmedEmail = result?.user.email {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constants.notificationUserLogin), object: confirmedEmail)
+                        UserDefaults.standard.set(true, forKey: Constants.prefConfirmedLogin)
+                    }
+                    
+                })
+            }
+        }
+        
+        return handled
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        return application(app, open: url,
+                           sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                           annotation: "")
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        /*if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+            print("handled source link")
+            return true
+        }*/
+        return false
     }
     
     func lockApp() {

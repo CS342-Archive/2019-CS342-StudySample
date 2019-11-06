@@ -8,6 +8,8 @@ target 'Master-Sample' do
   # Pods for Master-Sample
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/DynamicLinks'
   pod 'ResearchKit', '2.0.0'
 
 end

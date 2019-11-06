@@ -10,19 +10,19 @@
 		8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F42233838F000159EDF /* ActivitiesTableViewController.swift */; };
 		8E028F46233839E300159EDF /* ActivityTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F44233839E300159EDF /* ActivityTableItem.swift */; };
 		8E028F47233839E300159EDF /* StudyTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F45233839E300159EDF /* StudyTasks.swift */; };
-		8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F4E2338503700159EDF /* ProfileViewController.swift */; };
 		8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F522338555000159EDF /* StudyContainerTabBarController.swift */; };
 		8E028F562338567200159EDF /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F552338567200159EDF /* HealthKitManager.swift */; };
 		8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */; };
 		8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */; };
 		8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */; };
+		8E5AF33123728A1900533967 /* LoginCustomWaitStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */; };
+		8E5AF33423728A3A00533967 /* LoginCustomWaitStepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5AF33323728A3A00533967 /* LoginCustomWaitStepView.xib */; };
+		8E5AF33623728F2300533967 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5AF33523728F2300533967 /* Constants.swift */; };
 		8E6710092338790800AA32AB /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710082338790800AA32AB /* LoginStep.swift */; };
-		8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100C23387B0400AA32AB /* LoginWaitStep.swift */; };
 		8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */; };
-		8E6710142338827300AA32AB /* LoginFriendlyOrderedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */; };
 		8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67101A23388E3900AA32AB /* StudyUser.swift */; };
 		8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710242338A14D00AA32AB /* ORKESerialization.m */; };
-		8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */; };
+		8E78D5F2234808DE0026BED6 /* CS342-GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */; };
 		8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E02338230A002DCBBB /* AppDelegate.swift */; };
 		8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */; };
 		8EA015E62338230A002DCBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA015E42338230A002DCBBB /* Main.storyboard */; };
@@ -36,6 +36,7 @@
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
 		8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */; };
+		8EA4524A236CF0060086F2AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA45249236CF0060086F2AC /* GoogleService-Info.plist */; };
 		B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,21 +76,21 @@
 		8E028F42233838F000159EDF /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
 		8E028F44233839E300159EDF /* ActivityTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableItem.swift; sourceTree = "<group>"; };
 		8E028F45233839E300159EDF /* StudyTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTasks.swift; sourceTree = "<group>"; };
-		8E028F4E2338503700159EDF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8E028F522338555000159EDF /* StudyContainerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyContainerTabBarController.swift; sourceTree = "<group>"; };
 		8E028F552338567200159EDF /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableItem.swift; sourceTree = "<group>"; };
 		8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticProfileViewController.swift; sourceTree = "<group>"; };
+		8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomWaitStepViewController.swift; sourceTree = "<group>"; };
+		8E5AF33323728A3A00533967 /* LoginCustomWaitStepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCustomWaitStepView.xib; sourceTree = "<group>"; };
+		8E5AF33523728F2300533967 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8E6710082338790800AA32AB /* LoginStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
-		8E67100C23387B0400AA32AB /* LoginWaitStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWaitStep.swift; sourceTree = "<group>"; };
 		8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
-		8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFriendlyOrderedTask.swift; sourceTree = "<group>"; };
 		8E67101A23388E3900AA32AB /* StudyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUser.swift; sourceTree = "<group>"; };
 		8E6710222338A05300AA32AB /* Study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E6710242338A14D00AA32AB /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
 		8E6710252338A14D00AA32AB /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
-		8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CS342-GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EA015DD2338230A002DCBBB /* Master-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA015E02338230A002DCBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContainerViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		8EA0161E23382D76002DCBBB /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		8EA45249236CF0060086F2AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +148,6 @@
 		8E028F4D23384E7D00159EDF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				8E028F4E2338503700159EDF /* ProfileViewController.swift */,
 				8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */,
 				8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */,
 			);
@@ -159,6 +160,14 @@
 				8E028F552338567200159EDF /* HealthKitManager.swift */,
 			);
 			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		8E5AF33223728A1F00533967 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E5AF33323728A3A00533967 /* LoginCustomWaitStepView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8E67100E23387C6A00AA32AB /* Withdrawal */ = {
@@ -218,7 +227,8 @@
 				8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */,
 				8EA015E42338230A002DCBBB /* Main.storyboard */,
 				8E028F522338555000159EDF /* StudyContainerTabBarController.swift */,
-				8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */,
+				8EA45249236CF0060086F2AC /* GoogleService-Info.plist */,
+				8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */,
 				8EA015F22338235A002DCBBB /* Supporting Files */,
 				8E6710222338A05300AA32AB /* Study-Bridging-Header.h */,
 			);
@@ -233,6 +243,7 @@
 				8EA015E72338230D002DCBBB /* Assets.xcassets */,
 				8EA015E92338230D002DCBBB /* LaunchScreen.storyboard */,
 				8EA015EC2338230D002DCBBB /* Info.plist */,
+				8E5AF33523728F2300533967 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,12 +270,12 @@
 		8EA015FC23382811002DCBBB /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				8E5AF33223728A1F00533967 /* Views */,
 				8EA0161A233828E1002DCBBB /* ConsentDocument.swift */,
 				8EA0161E23382D76002DCBBB /* HealthDataStep.swift */,
 				8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */,
 				8E6710082338790800AA32AB /* LoginStep.swift */,
-				8E67100C23387B0400AA32AB /* LoginWaitStep.swift */,
-				8E6710132338827300AA32AB /* LoginFriendlyOrderedTask.swift */,
+				8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -320,6 +331,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -363,8 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA4524A236CF0060086F2AC /* GoogleService-Info.plist in Resources */,
 				8EA015EB2338230D002DCBBB /* LaunchScreen.storyboard in Resources */,
-				8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */,
+				8E5AF33423728A3A00533967 /* LoginCustomWaitStepView.xib in Resources */,
+				8E78D5F2234808DE0026BED6 /* CS342-GoogleService-Info.plist in Resources */,
 				8EA015E82338230D002DCBBB /* Assets.xcassets in Resources */,
 				8EA015E62338230A002DCBBB /* Main.storyboard in Resources */,
 			);
@@ -424,23 +440,22 @@
 				8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */,
 				8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */,
 				8E028F47233839E300159EDF /* StudyTasks.swift in Sources */,
-				8E67100D23387B0400AA32AB /* LoginWaitStep.swift in Sources */,
 				8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */,
 				8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */,
 				8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */,
 				8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */,
 				8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */,
-				8E028F4F2338503700159EDF /* ProfileViewController.swift in Sources */,
 				8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */,
+				8E5AF33123728A1900533967 /* LoginCustomWaitStepViewController.swift in Sources */,
 				8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */,
 				8E6710092338790800AA32AB /* LoginStep.swift in Sources */,
-				8E6710142338827300AA32AB /* LoginFriendlyOrderedTask.swift in Sources */,
 				8E028F46233839E300159EDF /* ActivityTableItem.swift in Sources */,
 				8E028F562338567200159EDF /* HealthKitManager.swift in Sources */,
 				8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */,
 				8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */,
 				8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */,
 				8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */,
+				8E5AF33623728F2300533967 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

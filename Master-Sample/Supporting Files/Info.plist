@@ -18,6 +18,24 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>edu.stanford.cs342.firebase</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>edu.stanford.cs342.sample-study</string>
+			</array>
+		</dict>
+	</array>
+	<key>FirebaseDynamicLinksCustomDomains</key>
+	<array>
+		<string>https://cs342.page.link/Rdse</string>
+		<string>https://cs342.page.link</string>
+		<string>https://mhealthcs342.page.link/u9DC</string>
+		<string>https://mhealthcs342.page.link</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>

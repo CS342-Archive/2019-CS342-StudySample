@@ -103,7 +103,9 @@ extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any], let identifier = json["identifier"] as? String {
             
                 let db = Firestore.firestore()
-                db.collection("surveys").document(identifier).setData(json) { err in
+                let baseUrl = "/edu.stanford.cs342.ssmart/users/santig@stanford.edu"
+                
+                db.collection(baseUrl + "/surveys").document(identifier).setData(json) { err in
                     if let err = err {
                         print("Error writing document: \(err)")
                     } else {

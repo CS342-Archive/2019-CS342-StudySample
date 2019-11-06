@@ -39,7 +39,6 @@ class HealthDataStepViewController: ORKInstructionStepViewController {
     }
     
     // MARK: ORKInstructionStepViewController
-    
     override func goForward() {
         healthDataStep?.getHealthAuthorization() { succeeded, _ in
             // The second part of the guard condition allows the app to proceed on the Simulator (where health data is not available)

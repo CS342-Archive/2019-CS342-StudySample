@@ -27,17 +27,24 @@ class OnboardingViewController: UIViewController {
         reviewConsentStep.reasonForConsent = "Consent to join the Developer Health Research Study."
         
         let loginStep = LoginStep(identifier: LoginStep.identifier)
-        let loginVerificationStep = LoginWaitStep(identifier: LoginWaitStep.identifier)
+        let loginVerificationStep = LoginCustomWaitStep(identifier: LoginCustomWaitStep.identifier)
         
-        //NOTE: requires NSFaceIDUsageDescription in info.plist
-        let passcodeStep = ORKPasscodeStep(identifier: "Passcode")
+        let passcodeStep = ORKPasscodeStep(identifier: "Passcode") //NOTE: requires NSFaceIDUsageDescription in info.plist
         passcodeStep.text = "Now you will create a passcode to identify yourself to the app and protect access to information you've entered."
         
         let completionStep = ORKCompletionStep(identifier: "CompletionStep")
         completionStep.title = "Welcome aboard."
         completionStep.text = "Thank you for joining this study."
         
-        let orderedTask = ORKOrderedTask(identifier: "Join", steps: [consentStep, reviewConsentStep, healthDataStep, loginStep, loginVerificationStep, passcodeStep, completionStep])
+        let fullSteps = [consentStep, reviewConsentStep, healthDataStep, loginStep, loginVerificationStep, passcodeStep, completionStep]
+        let emailVerificationSteps = [loginStep, loginVerificationStep, passcodeStep, completionStep]
+        
+        var stepsToUse = fullSteps
+        if StudyUser.globalEmail() != nil {
+            stepsToUse = emailVerificationSteps
+        }
+        
+        let orderedTask = ORKOrderedTask(identifier: "StudyOnboardingTask", steps: stepsToUse)
         let taskViewController = ORKTaskViewController(task: orderedTask, taskRun: nil)
         taskViewController.delegate = self
         
@@ -52,38 +59,27 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
         
         if stepViewController.step?.identifier == LoginStep.identifier {
             
-            /*if StudyUser.shared.currentUser != nil { //already logged in, skip
-                stepViewController.goForward()
-                return
-            }*/
+            if let _ = StudyUser.globalEmail() {
+                stepViewController.goForward() //already inputted an email, continue
+            }
             
-        } else if stepViewController.step?.identifier == LoginWaitStep.identifier {
-            
-            /*if StudyUser.shared.currentUser != nil { //already logged in, skip
-                stepViewController.goForward()
-                return
-            }*/
+        } else if stepViewController.step?.identifier == LoginCustomWaitStep.identifier {
             
             let stepResult = taskViewController.result.stepResult(forStepIdentifier: LoginStep.identifier)
-            if let idRes = stepResult?.results?.first as? ORKTextQuestionResult, let id = idRes.textAnswer,
-                let idConfirmRes = stepResult?.results?.last as? ORKTextQuestionResult, let idConfirm = idConfirmRes.textAnswer {
+            if let emailRes = stepResult?.results?.first as? ORKTextQuestionResult, let email = emailRes.textAnswer {
                 
-                if id == idConfirm {
-                    StudyUser.login(id) { (success) in
-                        guard success else {
-                            DispatchQueue.main.async {
-                                Alerts.showInfo(title: "Unable to Login", message: "Please try again in five minutes.")
-                            }
-                            return
+                StudyUser.sendLoginLink(email: email) { (success) in
+                    guard success else {
+                        DispatchQueue.main.async {
+                            Alerts.showInfo(title: "Unable to Login", message: "Please try again in five minutes.")
                         }
-                        stepViewController.goForward()
+                        stepViewController.goBackward()
+                        return
                     }
-                } else {
-                    stepViewController.goBackward()
-                    DispatchQueue.main.async {
-                        Alerts.showInfo(title: "Unable to Verify", message: "The two IDs that you entered don't match.")
-                    }
+                    
+                    StudyUser.save(email: email)
                 }
+                
             }
             
         }
@@ -104,8 +100,11 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
     
     func taskViewController(_ taskViewController: ORKTaskViewController, viewControllerFor step: ORKStep) -> ORKStepViewController? {
         if step is HealthDataStep {
-            let healthStepViewController = HealthDataStepViewController(step: step)
-            return healthStepViewController
+            return HealthDataStepViewController(step: step)
+        }
+        
+        if step is LoginCustomWaitStep {
+            return LoginCustomWaitStepViewController(step: step)
         }
         
         return nil

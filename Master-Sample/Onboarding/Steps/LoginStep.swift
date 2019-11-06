@@ -18,10 +18,11 @@ class LoginStep: ORKFormStep {
     override init(identifier: String) {
         super.init(identifier: identifier)
         
-        title = NSLocalizedString("Login", comment: "")
-        text = NSLocalizedString("Please enter the participant ID that you received in-clinic 👨🏽‍⚕️", comment: "")
+        title = NSLocalizedString("Almost done!", comment: "")
+        text = NSLocalizedString("We need to confirm your email address and send you a copy of the consent you just signed.", comment: "")
         
         formItems = createFormItems()
+        isOptional = false
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -29,17 +30,11 @@ class LoginStep: ORKFormStep {
     }
     
     fileprivate func createFormItems() -> [ORKFormItem] {
-        let idAnswerFormat = ORKTextAnswerFormat(maximumLength: 25)
-        idAnswerFormat.multipleLines = false
-        let idStepTitle = "Enter ID:"
-        let idQuestionStep = ORKFormItem(identifier: LoginStep.idStepIdentifier, text: idStepTitle, answerFormat: idAnswerFormat, optional: false)
+        let emailAnswerFormat = ORKEmailAnswerFormat()
+        let idStepTitle = "Enter your email address:"
+        let idQuestionStep = ORKFormItem(identifier: LoginStep.idStepIdentifier, text: idStepTitle, answerFormat: emailAnswerFormat, optional: false)
         
-        let idConfirmAnswerFormat = ORKTextAnswerFormat(maximumLength: 25)
-        idConfirmAnswerFormat.multipleLines = false
-        let idConfirmStepTitle = "Confirm ID:"
-        let idConfirmQuestionStep = ORKFormItem(identifier: LoginStep.idConfirmStepIdentifier, text: idConfirmStepTitle, answerFormat: idConfirmAnswerFormat, optional: false)
-        
-        return [idQuestionStep, idConfirmQuestionStep]
+        return [idQuestionStep]
     }
     
 }

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>267563013930-90gpn4nddmepu61t7ce4t7nac9dpgmsa.apps.googleusercontent.com</string>
+	<string>583340836755-tgjur0c3javhtppj8h1opvqkch8vp2tq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.267563013930-90gpn4nddmepu61t7ce4t7nac9dpgmsa</string>
+	<string>com.googleusercontent.apps.583340836755-tgjur0c3javhtppj8h1opvqkch8vp2tq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDZFphOPsibFOO40SdVJfRF-lVgH21riJk</string>
+	<string>AIzaSyCtzIlnSRoKQrNd8S0vC_nYYDUiJZBmsTQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>267563013930</string>
+	<string>583340836755</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>edu.stanford.cs342.sample</string>
+	<string>edu.stanford.cs342.sample-study</string>
 	<key>PROJECT_ID</key>
-	<string>cs342-master-sample</string>
+	<string>som-rit-phi-mhealth-qa</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cs342-master-sample.appspot.com</string>
+	<string>som-rit-phi-mhealth-qa.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:267563013930:ios:1d0fb0f67521aad3ccb053</string>
+	<string>1:583340836755:ios:7e99c927bd2fdf05634a66</string>
 	<key>DATABASE_URL</key>
-	<string>https://cs342-master-sample.firebaseio.com</string>
+	<string>https://som-rit-phi-mhealth-qa.firebaseio.com</string>
 </dict>
 </plist>
