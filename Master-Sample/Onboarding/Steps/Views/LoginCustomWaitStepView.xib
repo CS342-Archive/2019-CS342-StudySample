@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-03-fBp">
-                    <rect key="frame" x="20" y="5" width="354" height="60"/>
+                    <rect key="frame" x="20" y="0.0" width="354" height="60"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StanfordMedicine" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-rm-to2">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
@@ -57,9 +57,9 @@
                                 <constraint firstAttribute="height" constant="110" id="e4m-2b-lre"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-Iv-6n0">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-Iv-6n0">
                             <rect key="frame" x="5" y="181" width="334" height="86.5"/>
-                            <string key="text">we are ready to get you started! follow the steps on the email that we just sent you. You can tap on the button below to open your email app 📲</string>
+                            <string key="text">we are ready to get you started! follow the steps on the email that we just sent you. Tap on the button below to open your email app.</string>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-lv-C65">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-lv-C65">
                             <rect key="frame" x="20" y="282.5" width="304" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="TpF-zx-Fzl"/>
@@ -106,7 +106,7 @@
                 <constraint firstItem="Yn5-Ta-YEZ" firstAttribute="centerY" secondItem="lTJ-0B-azx" secondAttribute="centerY" id="5xx-cL-cw5"/>
                 <constraint firstItem="MpO-bm-jqZ" firstAttribute="leading" secondItem="GNO-xX-aZf" secondAttribute="leading" constant="20" id="65c-pT-4kc"/>
                 <constraint firstItem="eNc-03-fBp" firstAttribute="leading" secondItem="GNO-xX-aZf" secondAttribute="leading" constant="20" id="IrL-pV-CGR"/>
-                <constraint firstItem="eNc-03-fBp" firstAttribute="top" secondItem="lTJ-0B-azx" secondAttribute="top" constant="5" id="TNh-EK-L4v"/>
+                <constraint firstItem="eNc-03-fBp" firstAttribute="top" secondItem="lTJ-0B-azx" secondAttribute="top" id="TNh-EK-L4v"/>
                 <constraint firstItem="GNO-xX-aZf" firstAttribute="trailing" secondItem="Yn5-Ta-YEZ" secondAttribute="trailing" constant="25" id="X3l-cF-A8y"/>
                 <constraint firstItem="GNO-xX-aZf" firstAttribute="bottom" secondItem="MpO-bm-jqZ" secondAttribute="bottom" constant="20" id="ZtT-9P-L1h"/>
                 <constraint firstItem="GNO-xX-aZf" firstAttribute="trailing" secondItem="eNc-03-fBp" secondAttribute="trailing" constant="20" id="b2o-CX-8JO"/>

@@ -60,7 +60,9 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
         if stepViewController.step?.identifier == LoginStep.identifier {
             
             if let _ = StudyUser.globalEmail() {
-                stepViewController.goForward() //already inputted an email, continue
+                DispatchQueue.main.async {
+                    stepViewController.goForward()  //already inputted an email, continue
+                }
             }
             
         } else if stepViewController.step?.identifier == LoginCustomWaitStep.identifier {
@@ -72,8 +74,8 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                     guard success else {
                         DispatchQueue.main.async {
                             Alerts.showInfo(title: "Unable to Login", message: "Please try again in five minutes.")
+                            stepViewController.goBackward()
                         }
-                        stepViewController.goBackward()
                         return
                     }
                     
