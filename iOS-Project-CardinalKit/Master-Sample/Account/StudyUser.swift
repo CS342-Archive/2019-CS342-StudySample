@@ -27,8 +27,8 @@ class StudyUser {
         }
         
         let actionCodeSettings = ActionCodeSettings()
-        //actionCodeSettings.url = URL(string: "https://cs342.page.link")
-        actionCodeSettings.url = URL(string: "https://mhealthcs342.page.link")
+        actionCodeSettings.url = URL(string: "https://cs342.page.link")
+        //actionCodeSettings.url = URL(string: "https://mhealthcs342.page.link")
         actionCodeSettings.handleCodeInApp = true // The sign-in operation has to always be completed in the app.
         actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
         

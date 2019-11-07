@@ -15,6 +15,8 @@
 		8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */; };
 		8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */; };
 		8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */; };
+		8E55CB3F2374BD0600F0E9E6 /* CS342Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E55CB3E2374BD0000F0E9E6 /* CS342Support.framework */; };
+		8E55CB402374BD0600F0E9E6 /* CS342Support.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E55CB3E2374BD0000F0E9E6 /* CS342Support.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E5AF33123728A1900533967 /* LoginCustomWaitStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */; };
 		8E5AF33423728A3A00533967 /* LoginCustomWaitStepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5AF33323728A3A00533967 /* LoginCustomWaitStepView.xib */; };
 		8E5AF33623728F2300533967 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5AF33523728F2300533967 /* Constants.swift */; };
@@ -22,7 +24,7 @@
 		8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67100F23387C7A00AA32AB /* WithdrawalViewController.swift */; };
 		8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E67101A23388E3900AA32AB /* StudyUser.swift */; };
 		8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6710242338A14D00AA32AB /* ORKESerialization.m */; };
-		8E78D5F2234808DE0026BED6 /* CS342-GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */; };
+		8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */; };
 		8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E02338230A002DCBBB /* AppDelegate.swift */; };
 		8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */; };
 		8EA015E62338230A002DCBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA015E42338230A002DCBBB /* Main.storyboard */; };
@@ -30,27 +32,24 @@
 		8EA015EB2338230D002DCBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA015E92338230D002DCBBB /* LaunchScreen.storyboard */; };
 		8EA015F623382385002DCBBB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA015F523382385002DCBBB /* HealthKit.framework */; };
 		8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA015FD23382821002DCBBB /* OnboardingViewController.swift */; };
-		8EA0160F23382874002DCBBB /* CS342Support.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA0160E23382867002DCBBB /* CS342Support.framework */; };
-		8EA0161023382874002DCBBB /* CS342Support.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA0160E23382867002DCBBB /* CS342Support.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EA01619233828BB002DCBBB /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01618233828BB002DCBBB /* IntroductionViewController.swift */; };
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
 		8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */; };
-		8EA4524A236CF0060086F2AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA45249236CF0060086F2AC /* GoogleService-Info.plist */; };
 		B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8EA0160D23382867002DCBBB /* PBXContainerItemProxy */ = {
+		8E55CB3D2374BD0000F0E9E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8EA0160923382867002DCBBB /* CS342Support.xcodeproj */;
+			containerPortal = 8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8ECC933E231C7DB300A6DB80;
 			remoteInfo = CS342Support;
 		};
-		8EA0161123382874002DCBBB /* PBXContainerItemProxy */ = {
+		8E55CB412374BD0600F0E9E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8EA0160923382867002DCBBB /* CS342Support.xcodeproj */;
+			containerPortal = 8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8ECC933D231C7DB300A6DB80;
 			remoteInfo = CS342Support;
@@ -64,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8EA0161023382874002DCBBB /* CS342Support.framework in Embed Frameworks */,
+				8E55CB402374BD0600F0E9E6 /* CS342Support.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +80,7 @@
 		8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableItem.swift; sourceTree = "<group>"; };
 		8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticProfileViewController.swift; sourceTree = "<group>"; };
+		8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CS342Support.xcodeproj; path = "CS342-Support-Library/CS342Support.xcodeproj"; sourceTree = "<group>"; };
 		8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCustomWaitStepViewController.swift; sourceTree = "<group>"; };
 		8E5AF33323728A3A00533967 /* LoginCustomWaitStepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCustomWaitStepView.xib; sourceTree = "<group>"; };
 		8E5AF33523728F2300533967 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		8E6710222338A05300AA32AB /* Study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Study-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E6710242338A14D00AA32AB /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
 		8E6710252338A14D00AA32AB /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
-		8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CS342-GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EA015DD2338230A002DCBBB /* Master-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA015E02338230A002DCBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchContainerViewController.swift; sourceTree = "<group>"; };
@@ -101,12 +101,10 @@
 		8EA015F323382385002DCBBB /* Master-Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Master-Sample.entitlements"; sourceTree = "<group>"; };
 		8EA015F523382385002DCBBB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8EA015FD23382821002DCBBB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		8EA0160923382867002DCBBB /* CS342Support.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CS342Support.xcodeproj; path = "../CS342-Support-Library/CS342Support.xcodeproj"; sourceTree = "<group>"; };
 		8EA01618233828BB002DCBBB /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		8EA0161E23382D76002DCBBB /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
-		8EA45249236CF0060086F2AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,9 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA0160F23382874002DCBBB /* CS342Support.framework in Frameworks */,
 				8EA015F623382385002DCBBB /* HealthKit.framework in Frameworks */,
 				B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */,
+				8E55CB3F2374BD0600F0E9E6 /* CS342Support.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +160,14 @@
 			path = HealthKit;
 			sourceTree = "<group>";
 		};
+		8E55CB3A2374BD0000F0E9E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E55CB3E2374BD0000F0E9E6 /* CS342Support.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8E5AF33223728A1F00533967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +204,7 @@
 		8EA015D42338230A002DCBBB = {
 			isa = PBXGroup;
 			children = (
-				8EA0160923382867002DCBBB /* CS342Support.xcodeproj */,
+				8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */,
 				8EA015DF2338230A002DCBBB /* Master-Sample */,
 				8EA015DE2338230A002DCBBB /* Products */,
 				8EA015F423382385002DCBBB /* Frameworks */,
@@ -217,6 +223,7 @@
 		8EA015DF2338230A002DCBBB /* Master-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				8EA015F22338235A002DCBBB /* Supporting Files */,
 				8E67101923388E1B00AA32AB /* Account */,
 				8E028F54233855A300159EDF /* HealthKit */,
 				8E028F3F233838D200159EDF /* Activities */,
@@ -227,9 +234,7 @@
 				8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */,
 				8EA015E42338230A002DCBBB /* Main.storyboard */,
 				8E028F522338555000159EDF /* StudyContainerTabBarController.swift */,
-				8EA45249236CF0060086F2AC /* GoogleService-Info.plist */,
-				8E78D5F1234808DE0026BED6 /* CS342-GoogleService-Info.plist */,
-				8EA015F22338235A002DCBBB /* Supporting Files */,
+				8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */,
 				8E6710222338A05300AA32AB /* Study-Bridging-Header.h */,
 			);
 			path = "Master-Sample";
@@ -280,14 +285,6 @@
 			path = Steps;
 			sourceTree = "<group>";
 		};
-		8EA0160A23382867002DCBBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8EA0160E23382867002DCBBB /* CS342Support.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,7 +302,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8EA0161223382874002DCBBB /* PBXTargetDependency */,
+				8E55CB422374BD0600F0E9E6 /* PBXTargetDependency */,
 			);
 			name = "Master-Sample";
 			productName = "Master-Sample";
@@ -351,8 +348,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8EA0160A23382867002DCBBB /* Products */;
-					ProjectRef = 8EA0160923382867002DCBBB /* CS342Support.xcodeproj */;
+					ProductGroup = 8E55CB3A2374BD0000F0E9E6 /* Products */;
+					ProjectRef = 8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -363,11 +360,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8EA0160E23382867002DCBBB /* CS342Support.framework */ = {
+		8E55CB3E2374BD0000F0E9E6 /* CS342Support.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CS342Support.framework;
-			remoteRef = 8EA0160D23382867002DCBBB /* PBXContainerItemProxy */;
+			remoteRef = 8E55CB3D2374BD0000F0E9E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -377,10 +374,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA4524A236CF0060086F2AC /* GoogleService-Info.plist in Resources */,
 				8EA015EB2338230D002DCBBB /* LaunchScreen.storyboard in Resources */,
 				8E5AF33423728A3A00533967 /* LoginCustomWaitStepView.xib in Resources */,
-				8E78D5F2234808DE0026BED6 /* CS342-GoogleService-Info.plist in Resources */,
+				8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */,
 				8EA015E82338230D002DCBBB /* Assets.xcassets in Resources */,
 				8EA015E62338230A002DCBBB /* Main.storyboard in Resources */,
 			);
@@ -462,10 +458,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8EA0161223382874002DCBBB /* PBXTargetDependency */ = {
+		8E55CB422374BD0600F0E9E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CS342Support;
-			targetProxy = 8EA0161123382874002DCBBB /* PBXContainerItemProxy */;
+			targetProxy = 8E55CB412374BD0600F0E9E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
