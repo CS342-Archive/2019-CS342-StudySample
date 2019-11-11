@@ -12,6 +12,7 @@
 		8E028F47233839E300159EDF /* StudyTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F45233839E300159EDF /* StudyTasks.swift */; };
 		8E028F532338555000159EDF /* StudyContainerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F522338555000159EDF /* StudyContainerTabBarController.swift */; };
 		8E028F562338567200159EDF /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E028F552338567200159EDF /* HealthKitManager.swift */; };
+		8E03635D2378D20F00A645E6 /* RITConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03635C2378D20F00A645E6 /* RITConfig.swift */; };
 		8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */; };
 		8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */; };
 		8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */; };
@@ -36,6 +37,7 @@
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
 		8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */; };
+		8EDB77CA23762E7400EC1B4C /* RIT-GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EDB77C923762E7400EC1B4C /* RIT-GoogleService-Info.plist */; };
 		B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,7 @@
 		8E028F45233839E300159EDF /* StudyTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTasks.swift; sourceTree = "<group>"; };
 		8E028F522338555000159EDF /* StudyContainerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyContainerTabBarController.swift; sourceTree = "<group>"; };
 		8E028F552338567200159EDF /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		8E03635C2378D20F00A645E6 /* RITConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RITConfig.swift; sourceTree = "<group>"; };
 		8E1B55CA23557BB800C12F4D /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		8E1B55CC23559E9100C12F4D /* ProfileTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableItem.swift; sourceTree = "<group>"; };
 		8E1B55CE2355A0D900C12F4D /* StaticProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticProfileViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		8EA0161E23382D76002DCBBB /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		8EDB77C923762E7400EC1B4C /* RIT-GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RIT-GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				8E67101A23388E3900AA32AB /* StudyUser.swift */,
+				8E03635C2378D20F00A645E6 /* RITConfig.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				8EA015E22338230A002DCBBB /* LaunchContainerViewController.swift */,
 				8EA015E42338230A002DCBBB /* Main.storyboard */,
 				8E028F522338555000159EDF /* StudyContainerTabBarController.swift */,
+				8EDB77C923762E7400EC1B4C /* RIT-GoogleService-Info.plist */,
 				8E78D5F1234808DE0026BED6 /* GoogleService-Info.plist */,
 				8E6710222338A05300AA32AB /* Study-Bridging-Header.h */,
 			);
@@ -379,6 +385,7 @@
 				8E78D5F2234808DE0026BED6 /* GoogleService-Info.plist in Resources */,
 				8EA015E82338230D002DCBBB /* Assets.xcassets in Resources */,
 				8EA015E62338230A002DCBBB /* Main.storyboard in Resources */,
+				8EDB77CA23762E7400EC1B4C /* RIT-GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +445,7 @@
 				8E028F47233839E300159EDF /* StudyTasks.swift in Sources */,
 				8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */,
 				8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */,
+				8E03635D2378D20F00A645E6 /* RITConfig.swift in Sources */,
 				8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */,
 				8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */,
 				8EA015E12338230A002DCBBB /* AppDelegate.swift in Sources */,

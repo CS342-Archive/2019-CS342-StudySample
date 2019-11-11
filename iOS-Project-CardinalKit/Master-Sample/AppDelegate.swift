@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        StudyUser.shared.save() // TODO: for testing, keep updating user record
+        
         DynamicLinks.performDiagnostics(completion: nil)
         
         if !UserDefaults.standard.bool(forKey: Constants.prefFirstRunWasMarked) {

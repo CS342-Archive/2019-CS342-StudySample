@@ -8,6 +8,8 @@
 
 import UIKit
 import ResearchKit
+import Firebase
+import CS342Support
 
 class LaunchContainerViewController: UIViewController {
     
@@ -67,8 +69,18 @@ extension LaunchContainerViewController: ORKTaskViewControllerDelegate {
              the study and transition to the onboarding view.
              */
             if reason == .completed {
-                ORKPasscodeViewController.removePasscodeFromKeychain()
-                toOnboarding()
+                do {
+                    try Auth.auth().signOut()
+                    
+                    if (ORKPasscodeViewController.isPasscodeStoredInKeychain()) {
+                        ORKPasscodeViewController.removePasscodeFromKeychain()
+                    }
+                    
+                    toOnboarding()
+                } catch {
+                    print(error.localizedDescription)
+                    Alerts.showInfo(title: "Error", message: error.localizedDescription)
+                }
             }
             
             // Dismiss the `WithdrawViewController`.

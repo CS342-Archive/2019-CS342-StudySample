@@ -16,4 +16,7 @@ class Constants {
     
     static let notificationUserLogin = "NOTIFICATION_USER_LOGIN"
     
+    static let dataBucketUserDetails = "userDetails"
+    static let dataBucketSurveys = "surveys"
+    
 }

@@ -99,17 +99,13 @@ extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
                 print(jsonString)
             }
             
-            
             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any],
                 let identifier = json["identifier"] as? String,
-                let requestEmail = StudyUser.globalEmail() {
+                let taskUUID = json["taskRunUUID"] as? String,
+                let stanfordRITBucket = RITConfig.shared.getAuthCollection() {
             
                 let db = Firestore.firestore()
-                
-                let bundleId = Bundle.main.bundleIdentifier!
-                let stanfordRITBucket = "/\(bundleId)/users/\(requestEmail)"
-
-                db.collection(stanfordRITBucket + "/surveys/\(identifier)").document(identifier).setData(json) { err in
+                db.collection(stanfordRITBucket + "\(Constants.dataBucketSurveys)").document(identifier + "-" + taskUUID).setData(json) { err in
                     
                     if let err = err {
                         print("Error writing document: \(err)")

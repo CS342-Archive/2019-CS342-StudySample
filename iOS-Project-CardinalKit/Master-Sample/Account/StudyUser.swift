@@ -43,6 +43,18 @@ class StudyUser {
         }
     }
     
+    func save() {
+        
+        if let dataBucket = RITConfig.shared.getRootCollection(),
+            let email = currentUser?.email,
+            let uid = currentUser?.uid {
+            
+            let db = Firestore.firestore()
+            db.collection(dataBucket).document(uid).setData(["eID":uid,"userID":uid, "lastActive":Date().ISOStringFromDate(),"email":email])
+        }
+        
+    }
+    
     class func save(email: String) {
         UserDefaults.standard.set(email, forKey: Constants.prefUserEmail)
     }

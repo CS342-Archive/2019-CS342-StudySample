@@ -69,6 +69,8 @@ class LoginCustomWaitStepViewController: ORKStepViewController {
     }
     
     func continueIfLoggedIn() {
+        StudyUser.shared.save()
+        
         self.removeLoginObserver()
         self.goForward()
     }

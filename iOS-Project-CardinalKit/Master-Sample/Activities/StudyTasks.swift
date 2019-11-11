@@ -183,6 +183,6 @@ struct StudyTasks {
         
         steps += [summaryStep]
         
-        return ORKOrderedTask(identifier: "SurveyTask-" + UUID().uuidString, steps: steps)
+        return ORKOrderedTask(identifier: "SurveyTask-SF12", steps: steps)
     }()
 }
