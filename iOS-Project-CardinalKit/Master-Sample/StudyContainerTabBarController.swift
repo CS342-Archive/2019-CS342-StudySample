@@ -13,7 +13,6 @@ class StudyContainerTabBarController : UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HealthKitManager.shared.enableBackgroundDelivery()
     }
     
 }

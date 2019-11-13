@@ -86,37 +86,50 @@ extension ActivitiesTableViewController {
 
 extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
     
+    func resultAsJson(_ result: ORKTaskResult) throws -> [String:Any]? {
+        let jsonData = try ORKESerializer.jsonData(for: result)
+        return try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any]
+    }
+    
+    func send(_ json: [String:Any]) throws {
+        if  let identifier = json["identifier"] as? String,
+            let taskUUID = json["taskRunUUID"] as? String,
+            let stanfordRITBucket = RITConfig.shared.getAuthCollection() {
+            
+            let db = Firestore.firestore()
+            db.collection(stanfordRITBucket + "\(Constants.dataBucketSurveys)").document(identifier + "-" + taskUUID).setData(json) { err in
+                
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+            
+        }
+    }
+    
+    func send(_ files: URL, result: [String:Any]) {
+        if  let identifier = result["identifier"] as? String,
+            let taskUUID = result["taskRunUUID"] as? String,
+            let stanfordRITBucket = RITConfig.shared.getAuthCollection() {
+            
+            //upload files, one by one (?)
+        }
+    }
+    
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
         // Handle results using taskViewController.result
         
         do {
-            let result = taskViewController.result
-            let jsonData = try ORKESerializer.jsonData(for: result)
-            
-            
-            if let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) {
-                print(jsonString)
-            }
-            
-            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any],
-                let identifier = json["identifier"] as? String,
-                let taskUUID = json["taskRunUUID"] as? String,
-                let stanfordRITBucket = RITConfig.shared.getAuthCollection() {
-            
-                let db = Firestore.firestore()
-                db.collection(stanfordRITBucket + "\(Constants.dataBucketSurveys)").document(identifier + "-" + taskUUID).setData(json) { err in
-                    
-                    if let err = err {
-                        print("Error writing document: \(err)")
-                    } else {
-                        print("Document successfully written!")
-                    }
-                }
+            if let json = try resultAsJson(taskViewController.result) {
+                try send(json)
                 
+                if let associatedFiles = taskViewController.outputDirectory {
+                    send(associatedFiles, result: json)
+                }
             }
-            
-            
         } catch {
             print(error.localizedDescription)
         }

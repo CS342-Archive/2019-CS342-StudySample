@@ -7,6 +7,7 @@
 //
 
 import HealthKit
+import Firebase
 
 enum HealthKitError : Error {
     case notAvailable
@@ -19,7 +20,7 @@ class HealthKitManager {
     var healthStore: HKHealthStore = HKHealthStore()
     
     //global config
-    var defaultPredicate = HKQuery.predicateForSamples(withStart: Date(), end: Date().tomorrow, options: .strictStartDate)
+    var defaultPredicate = HKQuery.predicateForSamples(withStart: Date().startOfDay, end: Date().tomorrow, options: .strictStartDate)
     let defaultSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
     let defaultQueryLimit = Int(HKObjectQueryNoLimit)
     
@@ -81,12 +82,10 @@ extension HealthKitManager {
                 
                 let dispatchGroup = DispatchGroup()
                 dispatchGroup.enter()
-                strongSelf.query(quantityType: type, completion: { result, error in
+                strongSelf.query(quantityType: type, completion: { results, error in
                     if (error == nil) {
-                        //TODO: send result
-                        
-                        
-                        print("background query for \(type.identifier) with \(result.count) result(s)")
+                        strongSelf.save(results, forType: type)
+                        //print("background query for \(type.identifier) with \(result.count) result(s)")
                     }
                     dispatchGroup.leave()
                 })
@@ -97,12 +96,85 @@ extension HealthKitManager {
             })
             
             healthStore.execute(query)
-            healthStore.enableBackgroundDelivery(for: type, frequency: .immediate, withCompletion: { (success, error) in
+            healthStore.enableBackgroundDelivery(for: type, frequency: .hourly, withCompletion: { (success, error) in
                 if let error = error {
                     print(error.localizedDescription)
                 }
             })
             
+        }
+        
+    }
+    
+}
+
+extension HealthKitManager {
+ 
+    func save(_ results: [HKQuantitySample], forType type: HKQuantityType) {
+        //divide results by source
+        let groupedResults = results.grouped { (sample) -> String in
+            return sample.device?.getKey(appendSource: sample.sourceRevision.source) ?? "Unknown"
+        }
+        
+        groupedResults.keys.forEach { (key) in
+            
+            if let results = groupedResults[key],
+                let stanfordRITBucket = RITConfig.shared.getAuthCollection(),
+                FirebaseApp.app() != nil { //if nil, db will crash
+                
+                let dateString = Date().ISOStringFromDate()
+                let identifier = dateString + "-" + key
+                let calculatedSum = sum(results)
+                
+                let json: [String:Any] = ["date": dateString, "\(type.identifier)":calculatedSum]
+                
+                let db = Firestore.firestore()
+                db.collection(stanfordRITBucket + "\(Constants.dataBucketHealthKit)").document(identifier).setData(json) { err in
+                    
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    
+    fileprivate func sum(_ samples: [HKQuantitySample]) -> Double {
+        
+        var sum: Double = 0.0
+        guard let type = samples.first?.quantityType else {
+            return sum
+        }
+        
+        let unit = getUnit(for: type)
+        samples.forEach { (sample) in
+            sum += sample.quantity.doubleValue(for: unit)
+        }
+        
+        return sum
+        
+    }
+    
+    //can use preferredUnits(for:completion:) if desired
+    fileprivate func getUnit(for type: HKQuantityType) -> HKUnit {
+        
+        let id = HKQuantityTypeIdentifier(rawValue: type.identifier)
+        
+        switch id {
+        case .distanceWalkingRunning:
+            return HKUnit.meter()
+        case .heartRate:
+            return HKUnit.count().unitDivided(by: HKUnit.minute()) //bpm
+        case .stepCount:
+            fallthrough
+        default:
+            return HKUnit.count()
         }
         
     }

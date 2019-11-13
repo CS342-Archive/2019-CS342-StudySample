@@ -35,7 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        StudyUser.shared.save() // TODO: for testing, keep updating user record
+        if StudyUser.shared.currentUser != nil {
+            StudyUser.shared.save() // TODO: for testing, keep updating user record
+            HealthKitManager.shared.enableBackgroundDelivery()
+        }
         
         DynamicLinks.performDiagnostics(completion: nil)
         

@@ -18,5 +18,6 @@ class Constants {
     
     static let dataBucketUserDetails = "userDetails"
     static let dataBucketSurveys = "surveys"
+    static let dataBucketHealthKit = "healthKit"
     
 }

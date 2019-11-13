@@ -59,7 +59,7 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
         
         if stepViewController.step?.identifier == LoginStep.identifier {
             
-            if let _ = StudyUser.globalEmail() {
+            if let _ = StudyUser.shared.currentUser?.email {
                 DispatchQueue.main.async {
                     stepViewController.goForward()  //already inputted an email, continue
                 }
