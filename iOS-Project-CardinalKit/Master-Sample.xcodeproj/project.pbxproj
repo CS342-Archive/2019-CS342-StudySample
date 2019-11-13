@@ -37,6 +37,17 @@
 		8EA0161B233828E1002DCBBB /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161A233828E1002DCBBB /* ConsentDocument.swift */; };
 		8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0161E23382D76002DCBBB /* HealthDataStep.swift */; };
 		8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */; };
+		8EA24716237B956B00407166 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2470F237B955700407166 /* CareKit.framework */; };
+		8EA24717237B956B00407166 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2470F237B955700407166 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EA24732237B95ED00407166 /* CareKitStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2471E237B95DB00407166 /* CareKitStore.framework */; };
+		8EA24733237B95ED00407166 /* CareKitStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2471E237B95DB00407166 /* CareKitStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EA24734237B95ED00407166 /* CareKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA24727237B95DB00407166 /* CareKitUI.framework */; };
+		8EA24735237B95ED00407166 /* CareKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA24727237B95DB00407166 /* CareKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EA24767237B973100407166 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA24764237B972A00407166 /* ResearchKit.framework */; };
+		8EA24768237B973200407166 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA24764237B972A00407166 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EA2476B237BC41300407166 /* CareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24769237BC41300407166 /* CareViewController.swift */; };
+		8EA2476C237BC41300407166 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA2476A237BC41300407166 /* TipView.swift */; };
+		8EA2476E237BC51C00407166 /* CareKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA2476D237BC51C00407166 /* CareKitManager.swift */; };
 		8EDB77CA23762E7400EC1B4C /* RIT-GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EDB77C923762E7400EC1B4C /* RIT-GoogleService-Info.plist */; };
 		B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +67,62 @@
 			remoteGlobalIDString = 8ECC933D231C7DB300A6DB80;
 			remoteInfo = CS342Support;
 		};
+		8EA2470E237B955700407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24709237B955700407166 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		8EA24710237B955700407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24709237B955700407166 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
+			remoteInfo = CareKitTests;
+		};
+		8EA2471D237B95DB00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24718237B95DB00407166 /* CareKitStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E784B8F82232EED600736CA5;
+			remoteInfo = CareKitStore;
+		};
+		8EA2471F237B95DB00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24718237B95DB00407166 /* CareKitStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E784B9012232EED600736CA5;
+			remoteInfo = CareKitStoreTests;
+		};
+		8EA24726237B95DB00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24721237B95DB00407166 /* CareKitUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5174225B224185290054E97C;
+			remoteInfo = CareKitUI;
+		};
+		8EA24728237B95DB00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24721237B95DB00407166 /* CareKitUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 512B012E22C2F82900ABCB1D;
+			remoteInfo = CareKitUITests;
+		};
+		8EA24763237B972A00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24757237B972900407166 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		8EA24765237B972A00407166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA24757237B972900407166 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +132,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8EA24735237B95ED00407166 /* CareKitUI.framework in Embed Frameworks */,
+				8EA24733237B95ED00407166 /* CareKitStore.framework in Embed Frameworks */,
+				8EA24717237B956B00407166 /* CareKit.framework in Embed Frameworks */,
 				8E55CB402374BD0600F0E9E6 /* CS342Support.framework in Embed Frameworks */,
+				8EA24768237B973200407166 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +179,13 @@
 		8EA0161A233828E1002DCBBB /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		8EA0161E23382D76002DCBBB /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		8EA0162023382D83002DCBBB /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		8EA24709237B955700407166 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = CareKit/CareKit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		8EA24718237B95DB00407166 /* CareKitStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKitStore.xcodeproj; path = CareKit/CareKitStore/CareKitStore.xcodeproj; sourceTree = "<group>"; };
+		8EA24721237B95DB00407166 /* CareKitUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKitUI.xcodeproj; path = CareKit/CareKitUI/CareKitUI.xcodeproj; sourceTree = "<group>"; };
+		8EA24757237B972900407166 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		8EA24769237BC41300407166 /* CareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareViewController.swift; sourceTree = "<group>"; };
+		8EA2476A237BC41300407166 /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		8EA2476D237BC51C00407166 /* CareKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareKitManager.swift; sourceTree = "<group>"; };
 		8EDB77C923762E7400EC1B4C /* RIT-GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RIT-GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE197A4313244D66F9443580 /* Pods_Master_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00C0A5E814CBB847062E4F /* Pods-Master-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-Sample.debug.xcconfig"; path = "Target Support Files/Pods-Master-Sample/Pods-Master-Sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +196,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA24716237B956B00407166 /* CareKit.framework in Frameworks */,
 				8EA015F623382385002DCBBB /* HealthKit.framework in Frameworks */,
+				8EA24734237B95ED00407166 /* CareKitUI.framework in Frameworks */,
 				B083B52902E8CE1E6A11F857 /* Pods_Master_Sample.framework in Frameworks */,
+				8EA24732237B95ED00407166 /* CareKitStore.framework in Frameworks */,
+				8EA24767237B973100407166 /* ResearchKit.framework in Frameworks */,
 				8E55CB3F2374BD0600F0E9E6 /* CS342Support.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +291,10 @@
 		8EA015D42338230A002DCBBB = {
 			isa = PBXGroup;
 			children = (
+				8EA24757237B972900407166 /* ResearchKit.xcodeproj */,
+				8EA24709237B955700407166 /* CareKit.xcodeproj */,
+				8EA24718237B95DB00407166 /* CareKitStore.xcodeproj */,
+				8EA24721237B95DB00407166 /* CareKitUI.xcodeproj */,
 				8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */,
 				8EA015DF2338230A002DCBBB /* Master-Sample */,
 				8EA015DE2338230A002DCBBB /* Products */,
@@ -228,6 +314,7 @@
 		8EA015DF2338230A002DCBBB /* Master-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				8EA53F69237B833700729FBF /* CareKit */,
 				8EA015F22338235A002DCBBB /* Supporting Files */,
 				8E67101923388E1B00AA32AB /* Account */,
 				8E028F54233855A300159EDF /* HealthKit */,
@@ -289,6 +376,52 @@
 				8E5AF33023728A1900533967 /* LoginCustomWaitStepViewController.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		8EA2470A237B955700407166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA2470F237B955700407166 /* CareKit.framework */,
+				8EA24711237B955700407166 /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA24719237B95DB00407166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA2471E237B95DB00407166 /* CareKitStore.framework */,
+				8EA24720237B95DB00407166 /* CareKitStoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA24722237B95DB00407166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA24727237B95DB00407166 /* CareKitUI.framework */,
+				8EA24729237B95DB00407166 /* CareKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA24758237B972900407166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA24764237B972A00407166 /* ResearchKit.framework */,
+				8EA24766237B972A00407166 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA53F69237B833700729FBF /* CareKit */ = {
+			isa = PBXGroup;
+			children = (
+				8EA24769237BC41300407166 /* CareViewController.swift */,
+				8EA2476A237BC41300407166 /* TipView.swift */,
+				8EA2476D237BC51C00407166 /* CareKitManager.swift */,
+			);
+			path = CareKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,8 +490,24 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 8EA2470A237B955700407166 /* Products */;
+					ProjectRef = 8EA24709237B955700407166 /* CareKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 8EA24719237B95DB00407166 /* Products */;
+					ProjectRef = 8EA24718237B95DB00407166 /* CareKitStore.xcodeproj */;
+				},
+				{
+					ProductGroup = 8EA24722237B95DB00407166 /* Products */;
+					ProjectRef = 8EA24721237B95DB00407166 /* CareKitUI.xcodeproj */;
+				},
+				{
 					ProductGroup = 8E55CB3A2374BD0000F0E9E6 /* Products */;
 					ProjectRef = 8E55CB392374BD0000F0E9E6 /* CS342Support.xcodeproj */;
+				},
+				{
+					ProductGroup = 8EA24758237B972900407166 /* Products */;
+					ProjectRef = 8EA24757237B972900407166 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -374,6 +523,62 @@
 			fileType = wrapper.framework;
 			path = CS342Support.framework;
 			remoteRef = 8E55CB3D2374BD0000F0E9E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA2470F237B955700407166 /* CareKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKit.framework;
+			remoteRef = 8EA2470E237B955700407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24711237B955700407166 /* CareKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitTests.xctest;
+			remoteRef = 8EA24710237B955700407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA2471E237B95DB00407166 /* CareKitStore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKitStore.framework;
+			remoteRef = 8EA2471D237B95DB00407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24720237B95DB00407166 /* CareKitStoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitStoreTests.xctest;
+			remoteRef = 8EA2471F237B95DB00407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24727237B95DB00407166 /* CareKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKitUI.framework;
+			remoteRef = 8EA24726237B95DB00407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24729237B95DB00407166 /* CareKitUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitUITests.xctest;
+			remoteRef = 8EA24728237B95DB00407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24764237B972A00407166 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = 8EA24763237B972A00407166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA24766237B972A00407166 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = 8EA24765237B972A00407166 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -444,10 +649,12 @@
 				8EA01619233828BB002DCBBB /* IntroductionViewController.swift in Sources */,
 				8E1B55CD23559E9100C12F4D /* ProfileTableItem.swift in Sources */,
 				8EA015E32338230A002DCBBB /* LaunchContainerViewController.swift in Sources */,
+				8EA2476B237BC41300407166 /* CareViewController.swift in Sources */,
 				8E1B55CB23557BB800C12F4D /* ActivityTableViewCell.swift in Sources */,
 				8E028F47233839E300159EDF /* StudyTasks.swift in Sources */,
 				8E67101B23388E3900AA32AB /* StudyUser.swift in Sources */,
 				8E028F43233838F000159EDF /* ActivitiesTableViewController.swift in Sources */,
+				8EA2476C237BC41300407166 /* TipView.swift in Sources */,
 				8E03635D2378D20F00A645E6 /* RITConfig.swift in Sources */,
 				8E1B55CF2355A0D900C12F4D /* StaticProfileViewController.swift in Sources */,
 				8EA015FE23382821002DCBBB /* OnboardingViewController.swift in Sources */,
@@ -459,6 +666,7 @@
 				8E028F46233839E300159EDF /* ActivityTableItem.swift in Sources */,
 				8E028F562338567200159EDF /* HealthKitManager.swift in Sources */,
 				8EA0161F23382D76002DCBBB /* HealthDataStep.swift in Sources */,
+				8EA2476E237BC51C00407166 /* CareKitManager.swift in Sources */,
 				8EA0162123382D83002DCBBB /* HealthDataStepViewController.swift in Sources */,
 				8E67101023387C7A00AA32AB /* WithdrawalViewController.swift in Sources */,
 				8E6710262338A14D00AA32AB /* ORKESerialization.m in Sources */,
@@ -622,6 +830,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5J57DU2Q2;
 				INFOPLIST_FILE = "Master-Sample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,6 +853,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5J57DU2Q2;
 				INFOPLIST_FILE = "Master-Sample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -123,14 +123,12 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.9.2)
-  - ResearchKit (2.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/DynamicLinks
   - Firebase/Firestore
-  - ResearchKit (= 2.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -156,7 +154,6 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
-    - ResearchKit
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -181,8 +178,7 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 67fb42ba613def994e61854de2b3164f13790cc4
-  ResearchKit: 06020ff370f830138b5efd10bd3606acc4de49d6
 
-PODFILE CHECKSUM: 53ad4ab1193733bed8089513214a7f893cccfeae
+PODFILE CHECKSUM: 2cc4f216a63bf2032158a3f7f106537701011e0b
 
 COCOAPODS: 1.7.5
