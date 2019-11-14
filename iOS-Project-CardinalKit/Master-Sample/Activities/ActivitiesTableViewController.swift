@@ -10,6 +10,7 @@ import UIKit
 import ResearchKit
 import CS342Support
 import Firebase
+import FirebaseStorage
 
 class ActivitiesTableViewController: UITableViewController {
     
@@ -109,25 +110,74 @@ extension ActivitiesTableViewController: ORKTaskViewControllerDelegate {
         }
     }
     
-    func send(_ files: URL, result: [String:Any]) {
+    func send(_ files: URL, result: [String:Any]) throws {
         if  let identifier = result["identifier"] as? String,
             let taskUUID = result["taskRunUUID"] as? String,
             let stanfordRITBucket = RITConfig.shared.getAuthCollection() {
             
-            //upload files, one by one (?)
+            let fileManager = FileManager.default
+            let fileURLs = try fileManager.contentsOfDirectory(at: files, includingPropertiesForKeys: nil)
+            
+            for file in fileURLs {
+                
+                var isDir : ObjCBool = false
+                guard FileManager.default.fileExists(atPath: file.path, isDirectory:&isDir) else {
+                    continue //no file exists
+                }
+                
+                if isDir.boolValue {
+                    try send(file, result: result) //cannot send a directory, recursively iterate into it
+                    continue
+                }
+                
+                let storageRef = Storage.storage().reference()
+                let ref = storageRef.child("\(stanfordRITBucket)\(Constants.dataBucketStorage)/\(identifier)/\(taskUUID)/\(file.lastPathComponent)")
+                
+                let uploadTask = ref.putFile(from: file, metadata: nil)
+                
+                uploadTask.observe(.success) { snapshot in
+                    print("File uploaded successfully!")
+                }
+                
+                uploadTask.observe(.failure) { snapshot in
+                    print("Error uploading file!")
+                    /*if let error = snapshot.error as NSError? {
+                        switch (StorageErrorCode(rawValue: error.code)!) {
+                        case .objectNotFound:
+                            // File doesn't exist
+                            break
+                        case .unauthorized:
+                            // User doesn't have permission to access file
+                            break
+                        case .cancelled:
+                            // User canceled the upload
+                            break
+                            
+                            /* ... */
+                            
+                        case .unknown:
+                            // Unknown error occurred, inspect the server response
+                            break
+                        default:
+                            // A separate error occurred. This is a good place to retry the upload.
+                            break
+                        }
+                    }*/
+                }
+                
+            }
         }
     }
     
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
         // Handle results using taskViewController.result
-        
         do {
             if let json = try resultAsJson(taskViewController.result) {
                 try send(json)
                 
                 if let associatedFiles = taskViewController.outputDirectory {
-                    send(associatedFiles, result: json)
+                    try send(associatedFiles, result: json)
                 }
             }
         } catch {

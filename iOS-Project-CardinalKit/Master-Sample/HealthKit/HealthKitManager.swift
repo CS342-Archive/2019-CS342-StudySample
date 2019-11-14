@@ -20,7 +20,7 @@ class HealthKitManager {
     var healthStore: HKHealthStore = HKHealthStore()
     
     //global config
-    var defaultPredicate = HKQuery.predicateForSamples(withStart: Date().startOfDay, end: Date().tomorrow, options: .strictStartDate)
+    var defaultPredicate = HKQuery.predicateForSamples(withStart: Date().startOfDay, end: Date().tomorrow, options: [])
     let defaultSortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
     let defaultQueryLimit = Int(HKObjectQueryNoLimit)
     
@@ -122,14 +122,15 @@ extension HealthKitManager {
                 let stanfordRITBucket = RITConfig.shared.getAuthCollection(),
                 FirebaseApp.app() != nil { //if nil, db will crash
                 
-                let dateString = Date().ISOStringFromDate()
-                let identifier = dateString + "-" + key
+                let dateString = Date().startOfDay.ISOStringFromDate()
+                let identifier = Date().startOfDay.shortStringFromDate() + "-\(type.identifier)-\(key)"
+                let trimmedIdentifier = identifier.trimmingCharacters(in: .whitespaces)
                 let calculatedSum = sum(results)
                 
                 let json: [String:Any] = ["date": dateString, "\(type.identifier)":calculatedSum]
                 
                 let db = Firestore.firestore()
-                db.collection(stanfordRITBucket + "\(Constants.dataBucketHealthKit)").document(identifier).setData(json) { err in
+                db.collection(stanfordRITBucket + "\(Constants.dataBucketHealthKit)").document(trimmedIdentifier).setData(json) { err in
                     
                     if let err = err {
                         print("Error writing document: \(err)")
