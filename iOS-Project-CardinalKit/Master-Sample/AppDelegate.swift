@@ -40,8 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             HealthKitManager.shared.enableBackgroundDelivery()
         }
         
-        DynamicLinks.performDiagnostics(completion: nil)
-        
         if !UserDefaults.standard.bool(forKey: Constants.prefFirstRunWasMarked) {
             if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
                 ORKPasscodeViewController.removePasscodeFromKeychain()
